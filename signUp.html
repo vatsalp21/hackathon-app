@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validated Login Form</title>
+    <script>
+      function alertPop() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        alert("you have been logged in " + email + "!");
+      }
+    </script>
+    <link rel="stylesheet" href="signUpStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="label">User Login</h1>
+      <form
+        class="login_form"
+        action="index.html"
+        method="post"
+        name="form"
+        onsubmit="return validated() && alertPop();"
+      >
+        <div class="font">Email or Phone</div>
+        <input autocomplete="off" type="text" name="email" id="email" />
+        <div id="email_error">Please fill up your Email or Phone</div>
+        <div class="font font2">Password</div>
+        <input type="password" name="password" id="password" />
+        <div id="pass_error">Please fill up your Password</div>
+        <button type="submit" onclick="alertPop()">Login</button>
+      </form>
+    </div>
+    <script src="valid.js"></script>
+  </body>
+</html>
